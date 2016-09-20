@@ -16,7 +16,7 @@ $(document).ready(function(){
         'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
       },*/
       success: function(data){
-        /*if (data.errors) {
+        if (data.errors) {
           for(var p in data.errors.validator){
             if($('#add_'+ p +'_block').length) {
               $('#add_'+ p +'_block').text(data.errors.validator[p]);
@@ -26,8 +26,14 @@ $(document).ready(function(){
           }
         } else {
           $('.help-block').remove();
-          alert('提交成功，返回:'+data.id);
-        }*/
+          var tb = '<table class="table"><thead><tr><th>期</th><th>本息</th><th>本金</th><th>利息</th><th>剩余本金</th></tr></thead><tbody>';
+          for(var p in data.res.period){
+            tb += '<tr><td>'+p+'</td><td>'+data.res.period[p]['pa']+'</td><td>'+data.res.period[p]['pp']+'</td><td>'+data.res.period[p]['ip']+'</td><td>'+data.res.period[p]['bo']+'</td></tr>';
+          }
+          tb += '</tbody></table>';
+          $('.modal-body').html(tb);
+          $('#myModal').modal();
+        }
       },
       error: function(xhr, type){
         alert('Ajax error!');

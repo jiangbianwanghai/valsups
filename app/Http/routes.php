@@ -22,7 +22,7 @@ $app->post('/post', function (Request $request) {
     $year = $request->input('year');
     $total = $request->input('total');
     $rate = $request->input('rate');
-    $bl = new BankLoan(['loanAmount' => $total, 'year' => $year]);
+    $bl = new BankLoan(['loanAmount' => $total*10000, 'year' => $year]);
     //var_dump($bl->getEPP());
     return response()->json(['errors' => false, 'res' => $bl->getELP()]);
 });

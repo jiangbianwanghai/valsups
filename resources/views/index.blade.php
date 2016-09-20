@@ -56,7 +56,20 @@
       </nav>
 
       <div class="alert alert-warning" role="alert">例：贷款金额：10万，商贷，期限10年，利率4.9.</div>
-
+      <!-- Modal -->
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+              <h4 class="modal-title" id="myModalLabel">计算结果</h4>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+          </div>
+        </div>
+      </div>
       <!-- Main component for a primary marketing message or call to action -->
       <div class="jumbotron">
         <form class="form-horizontal">
