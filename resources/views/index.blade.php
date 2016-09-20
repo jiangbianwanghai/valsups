@@ -55,7 +55,7 @@
         </div><!--/.container-fluid -->
       </nav>
 
-      <div class="alert alert-warning" role="alert">例：贷款金额：10万，商贷，期限10年，利率4.9.</div>
+      <div class="alert alert-warning" role="alert">例：用商贷,贷10万,期限10年,利率4.9.</div>
       <!-- Modal -->
       <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
