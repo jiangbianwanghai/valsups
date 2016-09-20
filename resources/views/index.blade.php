@@ -114,6 +114,7 @@
           </div>
         </form>
       </div>
+      <div style="font-size:12px;" align="right">* 数据仅供参考</div>
 
     </div> <!-- /container -->
 
