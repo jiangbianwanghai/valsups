@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+
     <link rel="icon" href="/favicon.ico">
 
     <title>贷款计算器</title>
@@ -54,13 +55,51 @@
         </div><!--/.container-fluid -->
       </nav>
 
+      <div class="alert alert-warning" role="alert">例：贷款金额：10万，商贷，期限10年，利率4.9.</div>
+
       <!-- Main component for a primary marketing message or call to action -->
       <div class="jumbotron">
-        <h1>Navbar example</h1>
-        <p>This example is a quick exercise to illustrate how the default, static navbar and fixed to top navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
-        <p>
-          <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">View navbar docs &raquo;</a>
-        </p>
+        <form class="form-horizontal">
+          <div class="form-group">
+            <div class="col-sm-12">
+              <select class="form-control" id="method" name="method">
+                <option value="bank">商业贷款</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-12">
+              <select class="form-control" id="year" name="year">
+                <option value="">贷款期限</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10" selected="selected">10</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-12">
+              <input type="text" class="form-control" value="10" id="total" name="total" placeholder="贷款金额（单位：万，例如：1.5就是1.5万）">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-12">
+              <input type="text" class="form-control" value="4.9" id="rate" name="rate" placeholder="贷款利率">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-12">
+              <button type="submit" class="btn btn-default" id="add">立即计算</button>
+            </div>
+          </div>
+        </form>
       </div>
 
     </div> <!-- /container -->
@@ -73,5 +112,6 @@
     <script src="//cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="/ie10-viewport-bug-workaround.js"></script>
+    <script src="/custom.js"></script>
   </body>
 </html>

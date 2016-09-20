@@ -1,7 +1,7 @@
 {
-    "name": "laravel/lumen",
-    "description": "The Laravel Lumen Framework.",
-    "keywords": ["framework", "laravel", "lumen"],
+    "name": "valsups",
+    "description": "It is ASC(Amortization Schedule Calculator) demo.",
+    "keywords": ["bank", "calculator", "loan"],
     "license": "MIT",
     "type": "project",
     "require": {

@@ -11,6 +11,19 @@
 |
 */
 
+use Illuminate\Http\Request;
+use Jiangbianwanghai\BankLoan\BankLoan;
+
 $app->get('/', function () use ($app) {
     return view('index');
 });
+$app->post('/post', function (Request $request) {
+    $method = $request->input('method');
+    $year = $request->input('year');
+    $total = $request->input('total');
+    $rate = $request->input('rate');
+    $bl = new BankLoan(['loanAmount' => $total, 'year' => $year]);
+    //var_dump($bl->getEPP());
+    return response()->json(['errors' => false, 'res' => $bl->getELP()]);
+});
+//$app->get('/', 'ExampleController@index');
