@@ -24,6 +24,12 @@ $app->post('/post', function (Request $request) {
     $rate = $request->input('rate');
     $bl = new BankLoan(['loanAmount' => $total*10000, 'year' => $year]);
     //var_dump($bl->getEPP());
-    return response()->json(['errors' => false, 'res' => $bl->getELP()]);
+    return response()->json([
+        'errors' => false,
+        'res' => [
+            'elp' => $bl->getELP(),
+            'epp' => $bl->getEPP()
+        ]
+    ]);
 });
 //$app->get('/', 'ExampleController@index');

@@ -65,7 +65,12 @@
               <h4 class="modal-title" id="myModalLabel">计算结果</h4>
             </div>
             <div class="modal-body">
-              ...
+              <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="javascript:void(0);" id="elp-tab">等额本息</a></li>
+                <li role="presentation"><a href="javascript:void(0);" id="epp-tab">等额本金</a></li>
+              </ul>
+              <div class="elp"></div>
+              <div class="epp" style="display:none;"></div>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>

@@ -2,6 +2,7 @@ $(document).ready(function(){
 
   //提交按钮触发
   $("#add").on("click", function(){
+    var total = parseInt($('#total').val());
     $.ajax({
       type: 'post',
       url: '/post',
@@ -26,13 +27,21 @@ $(document).ready(function(){
           }
         } else {
           $('.help-block').remove();
-          var tb = '<table class="table"><thead><tr><th>期</th><th>本息</th><th>本金</th><th>利息</th><th>剩余本金</th></tr></thead><tbody>';
-          for(var p in data.res.period){
-            tb += '<tr><td>'+p+'</td><td>'+data.res.period[p]['pa']+'</td><td>'+data.res.period[p]['pp']+'</td><td>'+data.res.period[p]['ip']+'</td><td>'+data.res.period[p]['bo']+'</td></tr>';
+          var elp = '<table class="table"><thead><tr><th>期</th><th>本息</th><th>本金</th><th>利息</th><th>剩余本金</th></tr></thead><tbody>';
+          for(var p in data.res.elp.period){
+            elp += '<tr><td>'+p+'</td><td>'+data.res.elp.period[p]['pa']+'</td><td>'+data.res.elp.period[p]['pp']+'</td><td>'+data.res.elp.period[p]['ip']+'</td><td>'+data.res.elp.period[p]['bo']+'</td></tr>';
           }
-          tb += '</tbody></table><div style="font-size:12px;" align="right">* 数据仅供参考</div>';
-          $('.modal-body').html(tb);
+          elp += '</tbody></table><div style="font-size:12px;" align="right">* 数据仅供参考</div>';
+          $('.elp').html(elp);
+          //epp
+          var epp = '<table class="table"><thead><tr><th>期</th><th>本息</th><th>本金</th><th>利息</th><th>剩余本金</th></tr></thead><tbody>';
+          for(var p in data.res.epp.period){
+            epp += '<tr><td>'+p+'</td><td>'+data.res.epp.period[p]['pa']+'</td><td>'+data.res.epp.period[p]['pp']+'</td><td>'+data.res.epp.period[p]['ip']+'</td><td>'+data.res.epp.period[p]['bo']+'</td></tr>';
+          }
+          epp += '</tbody></table><div style="font-size:12px;" align="right">* 数据仅供参考</div>';
+          $('.epp').html(epp);
           $('#myModal').modal();
+          $('#myModalLabel').append(' 贷款：'+total.toFixed(2)+' 万');
         }
       },
       error: function(xhr, type){
@@ -40,6 +49,19 @@ $(document).ready(function(){
       }
     });
     return false;
+  });
+
+  $('#elp-tab').click(function(){
+    $('#elp-tab').parent().addClass('active');
+    $('#epp-tab').parent().removeClass('active');
+    $('.elp').show();
+    $('.epp').hide();
+  });
+  $('#epp-tab').click(function(){
+    $('#epp-tab').parent().addClass('active');
+    $('#elp-tab').parent().removeClass('active');
+    $('.epp').show();
+    $('.elp').hide();
   });
 
 });
