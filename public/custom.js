@@ -30,7 +30,7 @@ $(document).ready(function(){
           for(var p in data.res.period){
             tb += '<tr><td>'+p+'</td><td>'+data.res.period[p]['pa']+'</td><td>'+data.res.period[p]['pp']+'</td><td>'+data.res.period[p]['ip']+'</td><td>'+data.res.period[p]['bo']+'</td></tr>';
           }
-          tb += '</tbody></table>';
+          tb += '</tbody></table><div style="font-size:12px;" align="right">* 数据仅供参考</div>';
           $('.modal-body').html(tb);
           $('#myModal').modal();
         }

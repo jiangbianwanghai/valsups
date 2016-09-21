@@ -67,6 +67,9 @@
             <div class="modal-body">
               ...
             </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
           </div>
         </div>
       </div>
@@ -94,6 +97,26 @@
                 <option value="8">8</option>
                 <option value="9">9</option>
                 <option value="10" selected="selected">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
               </select>
             </div>
           </div>
@@ -109,12 +132,11 @@
           </div>
           <div class="form-group">
             <div class="col-sm-12">
-              <button type="submit" class="btn btn-default" id="add">立即计算</button>
+              <button type="submit" class="btn btn-primary btn-block" id="add">立即计算</button>
             </div>
           </div>
         </form>
       </div>
-      <div style="font-size:12px;" align="right">* 数据仅供参考</div>
 
     </div> <!-- /container -->
 
