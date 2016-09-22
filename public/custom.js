@@ -42,7 +42,7 @@ $(document).ready(function(){
           epp += '</tbody></table><div style="font-size:12px;" align="right">* 数据仅供参考</div>';
           $('.epp').html(epp);
           $('#myModal').modal();
-          $('#myModalLabel').append(' 贷款：'+total.toFixed(2)+' 万');
+          $('#myModalLabel').text('计算结果 贷款：'+total.toFixed(2)+' 万');
         }
       },
       error: function(xhr, type){
